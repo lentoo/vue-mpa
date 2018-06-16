@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="@/assets/logo.png">
+    <img src="@/assets/test.png">
     <h2>this is index module</h2>
   </div>
 </template>
