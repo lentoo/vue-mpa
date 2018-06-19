@@ -26,8 +26,14 @@ exports.cssLoaders = function(options) {
     const postcssLoader = {
         loader: 'postcss-loader',
         options: {
-            sourceMap: options.sourceMap
-        }
+            sourceMap: options.sourceMap,
+            ident: 'postcss',
+            plugins: [
+                require('postcss-sprites')({
+                    spritePath: 'dist/img/sprites'
+                })
+            ]
+        },
     }
 
     // generate loader string to be used with extract text plugin

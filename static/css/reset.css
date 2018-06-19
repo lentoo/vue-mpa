@@ -11,7 +11,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     outline: 0; 
     font-weight: inherit; 
     font-style: inherit; 
-    font-size: 100%; 
+    font-size: .16rem; 
     font-family: inherit; 
     vertical-align: baseline; 
 } 
@@ -51,25 +51,8 @@ hr {
     
     height: 1px
 }
-/* css reset end */
 
-/* flex layout */
-html {
-    height: 100%;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-body > section,div {
-    flex: 1;
-    background-color: #f3f3f3;
-}
-header, footer{
-    text-align: center;
-    line-height: 60px;
-    background-color: skyblue;
-    color: #fff;
+html,body {
+    min-height: 100%;
 }
 

@@ -1,20 +1,5 @@
 <footer>
     这是尾部
 </footer>
-<!-- <div id="foot">
-    <input type="hidden" class="is_login" value="{if Yii::$app->user->id > 0}true{else}false{/if}">
-    <div class="foot_column">
-        <ul>
-            <li><a href="/home/index" {if Yii::$app->controller->id eq 'home'}class="a"{/if}><div class="f_img_1"></div><p {if Yii::$app->controller->id eq 'home'}class="c06"{/if}>首页</p></a></li>
-            <li><a href="/product/index?goback={if Yii::$app->controller->id eq 'home'}1{else if Yii::$app->controller->id eq 'user'}2{else if Yii::$app->controller->id eq 'notification'}3{else}1{/if}" class="c73 {if Yii::$app->controller->id eq 'product'}{if Yii::$app->controller->action->id neq 'speciallist' and  Yii::$app->controller->action->id neq 'promotionlist'}a{/if}{/if}"><div class="f_img_2"></div><p {if Yii::$app->controller->id eq 'product'}{if Yii::$app->controller->action->id neq 'speciallist' and  Yii::$app->controller->action->id neq 'promotionlist' }class="c06"{/if}{/if}>快捷采购</p></a></li>
-            {if Yii::$app->user->id && Yii::$app->user->member->type == 3}
-            <li><a href="javascript:void(0);" onclick="showtips('分销商无法购买商品');" class="c73"><div class="f_img_4"></div><p>采购车</p></a></li>
-            {else}
-            <li><a href="/cart/index?goback={if Yii::$app->controller->id eq 'home'}1{else if Yii::$app->controller->id eq 'user'}2{else if Yii::$app->controller->id eq 'notification'}3{else if Yii::$app->controller->id eq 'product'}4{else}5{/if}" class="c73"><div class="f_img_4"><span id="cart_amount">{if !empty($num)}{$num}{else}0{/if}</span></div><p>采购车</p></a></li>
-            {/if}
-            <li><a href="/user/index?goback={if Yii::$app->controller->id eq 'home'}1{else if Yii::$app->controller->id eq 'user'}2{else if Yii::$app->controller->id eq 'notification'}3{else if Yii::$app->controller->id eq 'product'}4{else}1{/if}" class="c73 {if Yii::$app->controller->id eq 'user'}a{/if}"><div class="f_img_5"></div><p {if Yii::$app->controller->id eq 'user'}class="c06"{/if}>管理中心</p></a></li>
-        </ul>
-    </div>
-</div> -->
 </body>
 </html>

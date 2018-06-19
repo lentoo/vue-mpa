@@ -85,8 +85,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       context: __dirname,
       manifest: require('./vender.json')
     }),
-    /*
-    new webpack.optimize.CommonsChunkPlugin({
+    
+   /* new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks (module) {
         // any required modules inside node_modules are extracted to vendor
@@ -98,8 +98,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           ) === 0
         )
       }
-    }),
-    */
+    }),*/
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({

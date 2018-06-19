@@ -30,7 +30,7 @@ vue-mpa
 ├───────moudles                      # 各个模块
 ├──────────common                    # common模块
 ├──────────index                     # Index模块
-├──────────index                     # Main模块
+├──────────main                      # Main模块
 ├───static                           # 静态文件 绝对资源路径，不会被 Webpack 处理，它们会直接被复制到最终目录
 ```
 

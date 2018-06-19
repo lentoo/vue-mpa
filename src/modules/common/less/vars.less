@@ -1,0 +1,14 @@
+/* 定义一些常用的变量 */
+
+
+
+/* flex 布局 */
+.layout (@direction: column,@inline: flex){
+    display: @inline;
+    flex-direction: @direction;
+    flex-wrap: wrap;
+}
+
+#app {
+    .layout;
+}

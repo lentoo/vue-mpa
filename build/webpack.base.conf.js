@@ -59,7 +59,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 10,
+              limit: 10000,  // 小于10k的图片文件，进行base64编码
               name: utils.assetsPath('img/[name].[hash:5].[ext]')
             }
           },
