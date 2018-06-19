@@ -10,8 +10,17 @@
 </template>
 
 <script>
+import { getBaidu } from '@/fetch/index'
 export default {
-  components: {}
+  created () {
+    this.$mock.mock('https://api.douban.com/v2/movie/in_theaters', {
+      'age|18-60': 1
+    })
+
+    getBaidu().then(function (res) {
+      console.log(res)
+    })
+  }
 }
 </script>
 
@@ -31,8 +40,9 @@ export default {
     font-size: 0.12rem;
     color: orange;
   }
-  header ,footer {
-    line-height: .5rem;
+  header,
+  footer {
+    line-height: 0.5rem;
   }
   main {
     flex: 1;

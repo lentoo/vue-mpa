@@ -26,6 +26,8 @@ vue-mpa
 ├───dist                             # 上生产编译后的文件目录
 ├───src                              # 源代码
 ├───────assets                       # 静态资源，相对的资源路径，将由Webpack解析为模块依赖。
+├───────fetch                        # 后台api接口
+├──────────index                        # index模块 api接口
 ├───────layout                       # 公共布局html
 ├───────moudles                      # 各个模块
 ├──────────common                    # common模块
