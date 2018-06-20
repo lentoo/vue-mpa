@@ -1,7 +1,7 @@
-function htmlResize () {
+(function htmlResize () {
   var devierWidth = document.documentElement.clientWidth
-  document.documentElement.style.fontSize = (devierWidth * devicePixelRatio) / 7.5 + 'px'
-  addEventListener('resize', htmlResize)
-}
-
-htmlResize()
+  var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+  document.documentElement.style.fontSize = devierWidth / 3.75 + 'px'
+  addEventListener(resizeEvt, htmlResize)
+  document.addEventListener('DOMContentLoaded', resizeEvt, false)
+})()
