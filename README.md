@@ -32,6 +32,10 @@ vue-mpa
 ├───────moudles                      # 各个模块
 ├──────────common                    # common模块
 ├──────────index                     # Index模块
+├────────────components                  # Index模块下的组件
+├──────────────component-a                  # 组件a
+├──────────────component-b                  # 组件b
+├────────────router                      # Index模块下的路由
 ├──────────main                      # Main模块
 ├───static                           # 静态文件 绝对资源路径，不会被 Webpack 处理，它们会直接被复制到最终目录
 ```
