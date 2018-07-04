@@ -4,7 +4,10 @@
     <header>
       <h2>this is index module</h2>
     </header>
-    <main>main</main>
+    <main>
+      main
+      <router-view></router-view>
+    </main>
     <footer>footer</footer>
   </div>
 </template>
