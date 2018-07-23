@@ -1,9 +1,16 @@
 const path = require('path')
 const webpack = require('webpack')
-
+const package = require('../package.json')
 module.exports = {
   entry: {
-    vender: ['vue/dist/vue.esm.js','vue-router','vuex']
+    vender: Object.keys(package.dependencies).map(item=>{
+      if(item==='vue'){
+        return 'vue/dist/vue.esm.js'
+      }else{
+        return item
+      }
+    })
+    // vender: ['vue/dist/vue.esm.js','vue-router','vuex']
   },
   output: {
     path: path.join(__dirname, '../static/js'),

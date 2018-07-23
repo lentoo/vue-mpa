@@ -4,14 +4,17 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueRouter from 'vue-router'
-import mock from 'mockjs'
 import Index from './index.vue'
 
 import router from './router'
+
+if (process.env.NODE_ENV === 'development') {
+  const mock = require('mockjs')
+  Vue.prototype.$mock = mock
+}
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(VueAxios, axios)
-Vue.prototype.$mock = mock
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
