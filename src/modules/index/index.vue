@@ -6,6 +6,8 @@
     </header>
     <main>
       main
+      <p>购物车数量{{carNum}}</p>
+      <button @click="updateCarNum">更新购物车数量</button>
       <router-view></router-view>
     </main>
     <footer>footer</footer>
@@ -13,8 +15,12 @@
 </template>
 
 <script>
+import store from './store'
 import { getBaidu } from '@/fetch/index'
+import { mapGetters } from 'vuex'
 export default {
+  name: 'Index',
+  store,
   created () {
     this.$mock.mock('https://api.douban.com/v2/movie/in_theaters', {
       'age|18-60': 1
@@ -23,6 +29,18 @@ export default {
     getBaidu().then(function (res) {
       console.log(res)
     })
+  },
+
+  computed: {
+    ...mapGetters({
+      carNum: 'carNum'
+    })
+  },
+
+  methods: {
+    updateCarNum () {
+      this.$store.dispatch('UPDATE_CATNUM', this.carNum - 1)
+    }
   }
 }
 </script>

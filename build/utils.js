@@ -121,7 +121,7 @@ exports.getMultiEntry = function(globpath) {
         tmp = entry.split('/').splice(-4);
         var pathsrc = tmp[0] + '/' + tmp[1];
         if (tmp[0] == 'src') {
-            pathsrc = tmp[1];
+            pathsrc = tmp[1]+'/'+tmp[2];
         }
         pathname = pathsrc + '/' + basename; // 正确输出js和html的路径
         entries[pathname] = entry;

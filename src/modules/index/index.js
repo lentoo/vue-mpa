@@ -9,7 +9,6 @@ import Index from './index.vue'
 
 import router from './router'
 Vue.config.productionTip = false
-
 Vue.use(VueRouter)
 Vue.use(VueAxios, axios)
 Vue.prototype.$mock = mock

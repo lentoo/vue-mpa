@@ -15,7 +15,8 @@
     "axios": "^0.18.0",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -45,11 +46,16 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "glob": "^7.1.2",
     "html-loader": "^0.5.5",
+    "html-minifier": "^3.5.18",
     "html-webpack-plugin": "^2.30.1",
+    "imagemin": "^5.3.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^6.0.0",
     "img-loader": "^3.0.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "mockjs": "^1.0.1-beta3",
+    "multipage-webpack-plugin": "^0.4.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
@@ -64,12 +70,15 @@
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
+    "vue-server-renderer": "^2.5.16",
+    "vue-skeleton-webpack-plugin": "^1.1.18",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-node-externals": "^1.7.2"
   },
   "engines": {
     "node": ">= 6.0.0",

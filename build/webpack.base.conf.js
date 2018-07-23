@@ -18,7 +18,8 @@ const createLintingRule = () => ({
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
 })
-const entries = utils.getMultiEntry('./src/modules/**/*.js');
+const entries = utils.getMultiEntry('./src/modules/*/*.js');
+console.log(entries);
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: entries,
@@ -66,7 +67,7 @@ module.exports = {
           {
             loader: 'img-loader',
             options:{
-              plugins (context){ 
+              plugins (context){
                 if(process.env.NODE_ENV !== 'production')return [];
                 return [
                   require('imagemin-jpegtran')(),
