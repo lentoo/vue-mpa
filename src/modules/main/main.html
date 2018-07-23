@@ -1,5 +1,7 @@
 
     ${require("html-loader!@/layout/header.html")}
     <div id="main"></div>
+    <script src="/static/<%= htmlWebpackPlugin.options.bundleName %>">
+    </script>
     ${require("html-loader!@/layout/footer.html")}
     <!-- built files will be auto injected -->

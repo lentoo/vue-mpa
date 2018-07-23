@@ -12,7 +12,7 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 
-
+const bundleFileName = require('./bundle-config.json')
 const env = require('../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
@@ -85,7 +85,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       context: __dirname,
       manifest: require('./vender.json')
     }),
-    
+
    /* new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks (module) {
@@ -149,13 +149,14 @@ if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
 }
 
-let pages = utils.getMultiEntry('./src/modules/**/*.html');
+let pages = utils.getMultiEntry('./src/modules/*/*.html');
 for (const pathname in pages) {
   var conf = {
     filename: pathname+'.html',
     template: pages[pathname],
     inject: true,
     chunks: ['manifest',pathname],
+    bundleName: bundleFileName.vender.js,
     minify: {
       removeComments: true,
       collapseWhitespace: true,
